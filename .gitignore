@@ -113,3 +113,14 @@ node_modules
 
 # Transpiled code
 **/compile
+
+# Configs
+.cfg.deeploy.json
+.cfg.deeploy.json.production
+.cfg.deeploy.json.local
+
+deeploy.json
+deeploy.json.production
+deeploy.json.local
+
+.parameters.json
