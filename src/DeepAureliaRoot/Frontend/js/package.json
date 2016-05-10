@@ -1,5 +1,5 @@
 {
-  "name": "DeepNgRoot",
+  "name": "deep-aurelia-root",
   "version": "0.0.1",
   "description": "Base Angular microservice",
   "scripts": {

@@ -3,24 +3,28 @@ sudo: false
 node_js:
   - '4.3'
   - '4.4'
-  - '5.10'
-
 cache:
+  edge: true
   directories:
     - $(npm root -g)
     - node_modules
     - deep_modules
-
+    - $(npm config get prefix)/bin
 branches:
   only:
     - master
     - dev
     - stage
     - test
-
 before_install:
   - cp bin/test/package.json .
-  - npm run prepare
-
 after_success:
   - npm run coverage
+env:
+  matrix:
+    - TEST_SUITE=backend
+    - TEST_SUITE=frontend
+notifications:
+  slack:
+    secure: 
+      1QdFgXWPTlExEWSmjvgwrqLEM5eJ3mjR9jqmp/UturBQms6OZDCt/Q/IKBA0spGCjjOH8GqLDK5mq8KcdyXjPb6IjGdXy02zrv2lGISBA7f755GoJrGsGeIwV9wZopIXB7AQvnhfV2oSlhGe0XBz0TrEdDMx8CqAKUp76uxegP6gNAVOxGHxzv4c3C4/fXG1rSHYyK0IVoAPTKYUSM0ytDoyGCKcdAgitcLj0RMRx8g7F1GU7E025/A6uYZNjf6DUczKSCjfIvJ4Vh/A+8hCanmXwqsiG2+30Athsw+7KKSChLgicyPDGRUQBWwrj5CW6cjc8DAKEvNnCQqAPHNPIcfiB1UeS3n2MxAdb8hKlGSj33zHmwBUZ767PnDSNYWMn5MEP89ST76mcUTlHPJAfX/KynvvYwxm/MGg12fm8pcU3MRurzkxuq9laXQMZFWwwHfeGgCHSlVaocEkRISpHUYG76JU7IQz5wLGeSJk8x+uPmU4wsZoGRhfdlxRowg/utgqfgL2hN2uGFQcidlPUCIOGrLZawM2fFIvKg0QYMT1c4YnAQQCOkjefkQhugUZI8cNifTyoH1xbqmTM2gacsMdb0ea3oFIdPIkgafQJdEuHnGINy61OV4xu5no96Qp8Eh/DOijsRan4tWAAWBzrrqOUAqdj7P8iBHI4SAK4XI=
