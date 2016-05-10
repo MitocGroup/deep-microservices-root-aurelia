@@ -1,0 +1,11 @@
+{
+  "appIdentifier": "6576556765fdgdfg756fghjfhg",
+  "appName": "My Custom Root Aurelia App",
+  "env": "dev",
+  "awsAccountId": 123456789012,
+  "aws": {
+    "accessKeyId": "gfdgfd",
+    "secretAccessKey": "+gfdgfdgfdgfd/dEFpHV20ZxpQAkUqXwCSZBtZhCL",
+    "region": "us-west-2"
+  }
+}
