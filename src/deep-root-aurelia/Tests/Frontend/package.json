@@ -1,7 +1,7 @@
 {
-  "name": "deep-aurelia-root-backend-test",
+  "name": "deep-root-aurelia-frontend-test",
   "version": "0.0.1",
-  "description": "DEEP Micro Services Root Backend",
+  "description": "DEEP Micro Services Root Frontend",
   "scripts": {
     "install": "echo \"No install specified\" && exit 0",
     "test": "echo \"No test specified\" && exit 0",
