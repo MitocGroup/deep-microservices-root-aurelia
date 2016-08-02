@@ -122,15 +122,21 @@ deeploy.json*
 **/backend/src/**/*.zip
 **/backend/src/**/*.sfv
 **/backend/src/**/_config.json
+**/backend/src/**/_async_config.json
 
 # Frontend dependencies
 **/js/vendor/
 **/frontend/vendor/
 
 # Tests resources
-GitDiffWalker.*
+GitDiffWalker.js
+S3CoverageSynchronizer.js
+CoverageComparator.js
+CoverageManager.js
+GitHubMsgPublisher.js
 _vars.sh
 /package.json
 **/.sass-cache/
 **/coverage/
+**/coverages/
 
