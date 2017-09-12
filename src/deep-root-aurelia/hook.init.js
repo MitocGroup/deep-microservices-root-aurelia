@@ -1,16 +1,10 @@
-/**
- * Created by AlexanderC on 10/6/15.
- */
-
-/*eslint global-require: 0 */
-
 'use strict';
 
-module.exports = function(callback) {
-  var spawn = require('child_process').spawn;
-  var path = require('path');
+const path = require('path');
+const { spawn } = require('child_process');
 
-  var installation = spawn(
+module.exports = function(callback) {
+  let installation = spawn(
     process.env.SHELL || 'bash', 
     [
       path.join(__dirname, 'framework.sh')
